@@ -39,3 +39,11 @@ def solution(angle):
 def solution(numbers):
     answer = sum(numbers) / len(numbers)
     return answer
+    
+# 양꼬치
+def solution(n, k):
+    answer = 0
+    beef = 12000 * n
+    drink = 2000 * k - 2000 * (n//10)
+    answer = beef + drink
+    return answer
