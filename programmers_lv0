@@ -80,3 +80,15 @@ def solution(dot):
     elif dot[0] > 0 and dot[1] < 0 :
         answer = 4
     return answer
+
+# 짝수 홀수 개수
+def solution(num_list):
+    answer = [0,0]
+
+    for i in range(len(num_list)):
+        if(num_list[i] % 2 == 0):
+            answer[0] += 1
+        else:
+            answer[1] += 1
+    
+    return answer
