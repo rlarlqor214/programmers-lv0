@@ -92,3 +92,9 @@ def solution(num_list):
             answer[1] += 1
     
     return answer
+
+# 문자열 뒤집기
+def solution(my_string):
+    answer = ''
+    answer = my_string[::-1]
+    return answer
