@@ -140,3 +140,10 @@ def solution(n):
         else:
             pass
     return answer
+
+# 특정 문자 제거하기
+def solution(my_string, letter):
+    answer = ''
+    s= my_string.replace(letter,"")
+    answer = s   
+    return answer
