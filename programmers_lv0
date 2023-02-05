@@ -165,3 +165,11 @@ def solution(array):
         num_count += str(i)    
     answer = num_count.count("7")
     return answer
+
+#  문자열 정렬하기(2)
+def solution(my_string):
+    answer = ''
+    a = my_string.lower()            
+    listr = list(a)                  
+    listr.sort(reverse = False)      
+    return answer.join(listr)
