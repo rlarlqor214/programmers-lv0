@@ -229,3 +229,9 @@ def solution(array):
     s = int(learr)
     answer = array[s-1]
     return answer
+
+# 편지
+def solution(message):
+    answer = 0
+    answer = len(message) *2
+    return answer
