@@ -243,3 +243,11 @@ def solution(s1, s2):
     ses3 = set(s3)
     answer = len(s3) - len(ses3)  
     return answer
+
+# 자릿수 더하기
+def solution(n):
+    answer = 0
+    n_st = str(n)
+    for i in range(len(n_st)):
+        answer += int(n_st[i])
+    return answer
