@@ -268,3 +268,13 @@ def solution(my_string):
         if i.isdigit():
             answer += int(i)
     return answer
+
+# 모음 제거
+def solution(my_string):
+    answer = ''
+    eng = ("a,e,i,o,u")
+    for i in my_string:
+        if i in eng :
+            my_string = my_string.replace(i,"")
+    answer = my_string
+    return answer
