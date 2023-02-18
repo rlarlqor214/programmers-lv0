@@ -278,3 +278,13 @@ def solution(my_string):
             my_string = my_string.replace(i,"")
     answer = my_string
     return answer
+
+# 제곱수 판별하기
+def solution(n):
+    answer = 0
+    s = n ** (1/2)
+    if(int(s) == s):
+        answer = 1
+    else:
+        answer = 2
+    return answer
