@@ -288,3 +288,13 @@ def solution(n):
     else:
         answer = 2
     return answer
+
+# 개미 군단
+def solution(hp):
+    answer = 0
+    
+    king = hp // 5
+    solider = (hp-(5*king)) // 3
+    other = (hp-(5*king)-(3*solider)) // 1
+    answer = king + solider + other
+    return answer
