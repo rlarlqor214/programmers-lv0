@@ -298,3 +298,20 @@ def solution(hp):
     other = (hp-(5*king)-(3*solider)) // 1
     answer = king + solider + other
     return answer
+
+# 가위 바위 보
+def solution(rsp):
+    answer = ''
+    st_rsp = str(rsp)
+    li_rsp = list(st_rsp)
+    for i in range(len(li_rsp)):
+        if(li_rsp[i] == "0"):
+            li_rsp[i] = '5'
+        elif(li_rsp[i] == "2"):
+            li_rsp[i] = '0'
+        else:
+            li_rsp[i] = '2'
+            
+    for j in li_rsp:         # li_rsp리스트이므로 j만큼 반복하는데 answer에다가 j의 값을
+        answer += j          # 계속해서 넣어준다.
+    return answer
