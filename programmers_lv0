@@ -353,3 +353,12 @@ def solution(n, numlist):
         if(numlist[i] % n == 0):
             answer.append(numlist[i])
     return answer
+
+# 주사위의 개수
+def solution(box, n):
+    answer = 0
+    s= box[0] // n
+    d = box[1] // n
+    f = box[2] // n
+    answer = s*d*f
+    return answer
