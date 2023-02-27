@@ -380,3 +380,11 @@ def solution(array):
     answer[0] = max(array)
     answer[1] = array.index(max(array))
     return answer
+
+# 인덱스 바꾸기
+def solution(my_string, num1, num2):
+    answer = ''
+    listr = list(my_string)
+    listr[num1],listr[num2] = listr[num2],listr[num1]
+    answer = answer.join(listr)
+    return answer
