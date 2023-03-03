@@ -406,3 +406,10 @@ def solution(age):
     for i in str(age):
         answer += asc[int(i)]
     return answer
+
+# 피자 나눠먹기(2)
+def solution(n):
+    piza= 1
+    while((piza *6) % n != 0):
+        piza +=1
+    return piza
