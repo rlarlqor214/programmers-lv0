@@ -445,3 +445,11 @@ def solution(num, k):
         else :
             answer = a+1
     return answer
+
+# 문자열 정렬하기(2)
+def solution(my_string):
+    answer = ''
+    a = my_string.lower()         
+    listr = list(a)                  
+    listr.sort(reverse = False)      
+    return answer.join(listr) 
