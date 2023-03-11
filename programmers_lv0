@@ -491,3 +491,18 @@ def solution(letter):
             if k == i:
                 answer += morse[i]
     return answer
+
+# A로 B 만들기
+def solution(before,after):
+    answer = 0
+    count = 0
+    before = sorted(before)
+    after = sorted(after)
+    for i in range(len(before)):
+        if(before[i] == after[i]):
+            count += 1
+    if(count == len(after)):
+        answer = 1
+    else :
+        answer = 0
+    return answer
