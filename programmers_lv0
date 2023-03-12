@@ -506,3 +506,14 @@ def solution(before,after):
     else :
         answer = 0
     return answer
+
+# 2차원으로 만들기
+def solution(num_list, n):
+    answer = []
+    bin_list = []
+    for i in range(0,len(num_list),n):
+        bin_list.append(i)
+    
+    for k in bin_list:
+        answer.append(num_list[0+k:n+k])
+    return answer
