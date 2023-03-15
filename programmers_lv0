@@ -528,3 +528,13 @@ def solution(n):
         count *=i    
     answer = i-1
     return answer
+
+# 가까운 수
+def solution(array, n):
+    answer = 0
+    d = []
+    array = sorted(array)
+    for i in range(len(array)):
+        d.append(abs(n - array[i]))
+    answer = array[d.index(min(d))]
+    return answer
