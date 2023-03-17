@@ -549,3 +549,13 @@ def solution(i, j, k):
             if (s[p] == str(k)):
                 answer += 1
     return answer
+
+# 진료순서 정하기
+def solution(emergency):
+    answer = []
+    a = [i for i in emergency]
+    a.sort(reverse = True)
+    for j in range(len(a)):
+        if (emergency.count(a[j]) >= 1):
+            answer.append(a.index(emergency[j]) + 1)
+    return answer
