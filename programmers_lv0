@@ -567,3 +567,12 @@ def solution(s):
         if s.count(c) == 1:
             answer += c
     return answer
+
+# 숨어있는 숫자의 덧셈(2)
+import re
+def solution(my_string):
+    answer = 0
+    numbers = re.findall(r'\d+', my_string)
+    for i in range(len(numbers)):
+        answer += int(numbers[i])
+    return answer
