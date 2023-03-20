@@ -583,3 +583,16 @@ def solution(bin1, bin2):
     bin2 = int(bin2,2)
     bin3 = bin(bin1 + bin2)
     return bin3[2:]
+
+# 소인수분해
+    answer = []
+    i =2
+    while(i <= n):
+        if( n % i == 0):
+            answer.append(i)
+            n = n / i
+        else:
+            i = i +1 
+    answer = list(set(answer))
+    answer.sort()
+    return answer
