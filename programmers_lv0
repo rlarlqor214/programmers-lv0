@@ -605,3 +605,21 @@ def solution(array):
         num_count += str(i) 
     answer = num_count.count("7")
     return answer
+
+# 공 던지기
+def solution(numbers, k):
+    answer = numbers[0]
+    step = 0
+    count = 0
+    while(True): 
+        if (step < len(numbers)):
+            answer = numbers[step]
+            count += 1
+        elif (step >= len(numbers)):
+            step = step - len(numbers)
+            answer = numbers[step]
+            count += 1
+        step += 2
+        if(count == k):
+            break
+    return answer
