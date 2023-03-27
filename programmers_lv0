@@ -664,3 +664,22 @@ def solution(my_string):
         if(my_string[i] == '+'):
             answer += int(my_string[i+1])
     return answer
+
+# 구슬을 나누는 경우의 수
+def solution(balls, share):
+    answer = 0
+    n = balls
+    m = share
+    a= 1
+    b = 1
+    c = 1
+    for i in range(n, 0, -1):
+        a *= i
+
+    for i in range(m, 0, -1):
+        b *= i
+    for i in range(n-m, 0, -1):
+        print(i)
+        c *= i
+    answer = (a) // ((c)  * b)
+    return answer
