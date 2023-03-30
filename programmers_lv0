@@ -687,3 +687,18 @@ def solution(balls, share):
 ＃ 삼각형의 완성조건（２）
 def solution(sides):
     return min(sides)*2 -1
+
+# 외계어 사전
+def solution(spell, dic):
+    answer = 0 
+    for i in dic:
+        count = 0
+        for j in range(0,len(spell),1):
+            if(i.count(spell[j]) >= 1):
+                count += 1
+        if(count == len(spell)):
+            answer = 1
+            break
+        else :
+            answer = 2
+    return answer
