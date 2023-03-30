@@ -702,3 +702,28 @@ def solution(spell, dic):
         else :
             answer = 2
     return answer
+
+# 캐릭터의 좌표
+def solution(keyinput, board):
+    x = 0
+    y = 0
+    x_board = (board[0]-1)//2
+    y_board = (board[1]-1)//2
+    for i in range(len(keyinput)):
+        if(keyinput[i] == "left"):
+            x -= 1
+            if (x_board < abs(x)):
+                x += 1
+        elif(keyinput[i] == "right"):
+            x += 1
+            if (x_board < x):
+                x -= 1
+        elif(keyinput[i] == "up"):
+            y += 1
+            if (y_board < y):
+                y -= 1  
+        elif(keyinput[i] == "down"):
+            y -= 1
+            if (y_board < abs(y)):
+                y += 1
+    return [x, y]
