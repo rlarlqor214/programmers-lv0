@@ -741,3 +741,7 @@ def solution(dots):
     x = max(array_x) - min(array_x)
     y = max(array_y) - min(array_y)
     return x*y
+
+# 종이 자르기
+def solution(M, N):
+    return M * N -1
