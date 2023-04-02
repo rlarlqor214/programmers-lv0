@@ -745,3 +745,15 @@ def solution(dots):
 # 종이 자르기
 def solution(M, N):
     return M * N -1
+
+# 직사각형 넓이 구하기
+def solution(dots):
+    array_x = []
+    array_y = []
+    for i in range(len(dots)):
+        array_x.append(dots[i][0])
+    for j in range(len(dots)):
+        array_y.append(dots[j][1])
+    x = max(array_x) - min(array_x)
+    y = max(array_y) - min(array_y)
+    return x*y
