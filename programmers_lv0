@@ -757,3 +757,16 @@ def solution(dots):
     x = max(array_x) - min(array_x)
     y = max(array_y) - min(array_y)
     return x*y
+
+# 로그인 성공?
+def solution(id_pw, db):
+    answer = ''
+    for id,pw in db:
+            if(id_pw[0] == id):
+                if(id_pw[1] == pw):
+                    answer = 'login'
+            if(id_pw[0]==id and id_pw[1] != pw):
+                    answer = 'wrong pw'
+            if(id_pw[0] != id and id_pw[1] != pw):
+                answer = 'fail'
+    return answer
