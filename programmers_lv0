@@ -783,4 +783,17 @@ def solution(chicken):
         answer += service_coupon
         coupon = coupon % 10 + service_coupon    
     return answer
+    
+# 등수 매기기
+def solution(score):
+    answer = []
+    grade = []
+    for i in score:
+        average = (i[0] + i[1]) / 2
+        grade.append(average)
+    a = [j for j in grade]
+    grade.sort(reverse = True)
+    for v in a:
+        answer.append(grade.index(v)+1)
+    return answer
  
