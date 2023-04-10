@@ -848,3 +848,33 @@ def solution(A,B):
             return i
         a_list.insert(0,a_list.pop())
     return -1
+
+# 다항식 더하기
+def solution(polynomial):
+    answer = ''
+    a = polynomial.split(' + ')
+    c = 0
+    d = 0
+    for i in a:
+        if(i.count("x") == 1):
+            if(len(i) == 1):
+                d += 1
+            if(len(i) == 2):
+                d += int(i[0])
+            elif(len(i) >= 3):
+                d += int(i[:-1])
+        else:
+             c += int(i)
+    if(d >= 2):
+        if(c >= 1):
+            answer = str(d) + "x" + " + " + str(c)
+        else:
+            answer = str(d) + "x"
+    elif(d == 1):
+        if(c >= 1):
+            answer = "x + " + str(c)
+        else:
+            answer = "x"
+    else:
+        answer = str(c)
+    return answer
