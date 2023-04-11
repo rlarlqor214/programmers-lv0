@@ -878,3 +878,14 @@ def solution(polynomial):
     else:
         answer = str(c)
     return answer
+
+# 최빈값 구하기
+def solution(array):
+    if len(array)==1:
+        return array[0]
+    while len(array) != 0:
+        for i, j in enumerate(set(array)):
+            array.remove(j)
+        if len(array) == 1:
+            return array[0]
+    return -1
