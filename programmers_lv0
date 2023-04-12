@@ -889,3 +889,22 @@ def solution(array):
         if len(array) == 1:
             return array[0]
     return -1
+
+# O,X퀴즈
+def solution(quiz):
+    answer = []
+    c = 0
+    for i in quiz:
+        array = i.split()
+        for j in range(len(array)):
+            if( j % 2 == 0):
+                array[j] = int(array[j])
+        if(array[1] == '-'):
+            c = array[0]-array[2]
+        if(array[1] == '+'):
+            c = array[0]+ array[2]
+        if(c == array[4]):
+            answer.append("O")
+        else:
+            answer.append("X")
+    return answer
