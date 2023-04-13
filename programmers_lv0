@@ -908,3 +908,18 @@ def solution(quiz):
         else:
             answer.append("X")
     return answer
+
+# 분수의 덧셈
+def solution(numer1, denom1, numer2, denom2):
+    answer = []
+    n_1 = 0
+    numer3 = (numer1 * denom2) + (numer2 * denom1)
+    denom3 = denom1 * denom2
+    for i in range(1,numer3+1):
+        if(numer3 % i == 0 and denom3 % i == 0):
+            n_1 = i
+    res_num3 = numer3 // n_1
+    res_den3 = denom3 // n_1
+    answer.append(res_num3)
+    answer.append(res_den3)
+    return answer
