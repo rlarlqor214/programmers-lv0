@@ -923,3 +923,14 @@ def solution(numer1, denom1, numer2, denom2):
     answer.append(res_num3)
     answer.append(res_den3)
     return answer
+
+# 다음에 올 숫자
+def solution(common):
+    answer = 0
+    if((common[0]+common[2]) / 2 == common[1]):
+        role = common[1] - common[0]
+        answer = common[-1] + role
+    else:
+        role = common[1] / common[0]
+        answer = common[-1] * role
+    return answer
