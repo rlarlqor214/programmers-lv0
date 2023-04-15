@@ -934,3 +934,20 @@ def solution(common):
         role = common[1] / common[0]
         answer = common[-1] * role
     return answer
+
+# 연속된 수의 합
+def solution(num, total):
+    answer = []
+    mid_number = total // num
+    num = (num-1)//2
+    answer.append(mid_number)
+    for i in range(1,num+1):
+        answer.append(mid_number+i)
+        answer.append(mid_number-i)
+    answer.sort()
+    if(sum(answer) != total):
+        if(sum(answer) + (answer[-1]+1) == total):
+            answer.append(answer[-1]+1)
+        else:
+            answer.append(answer[0]-1)
+    return answer
